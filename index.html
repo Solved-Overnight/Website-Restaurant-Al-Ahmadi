@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Ahmadi Restaurant | Authentic Kuwaiti Hospitality</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              kuwait: {
+                gold: '#C5A059',
+                goldLight: '#E5C585',
+                green: '#1A3C34',
+                sand: '#F3E5AB',
+                cream: '#F9F9F4',
+                dark: '#2D241E',
+              }
+            },
+            fontFamily: {
+              serif: ['Amiri', 'serif'],
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+            },
+            backgroundImage: {
+              'pattern-geometric': "url('https://www.transparenttextures.com/patterns/arabesque.png')",
+            },
+            animation: {
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 80px; /* Fix for fixed navbar obscuring content */
+      }
+      body {
+        background-color: #F9F9F4;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+          display: none;
+      }
+      .scrollbar-hide {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+      }
+      .gold-text-gradient {
+        background: linear-gradient(to right, #C5A059, #F3E5AB, #C5A059);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+        animation: shine 5s linear infinite;
+      }
+      @keyframes shine {
+        to {
+          background-position: 200% center;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
